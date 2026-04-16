@@ -43,8 +43,14 @@ parser.add_argument('--image', dest='inputimg',
                     help='image-name', default="")
 parser.add_argument('--outdir', dest='outputpath',
                     help='output-directory', default="examples/res/")
+parser.add_argument('--outputfile', dest='outputfile',
+                    help='output json filename (relative to outdir)', default='alphapose-results.json')
 parser.add_argument('--save_img', default=False, action='store_true',
                     help='save result as image')
+parser.add_argument('--save_mask', default=False, action='store_true',
+                    help='save per-person binary body masks')
+parser.add_argument('--save_mask_vis', default=False, action='store_true',
+                    help='save image overlays visualizing person masks')
 parser.add_argument('--vis', default=False, action='store_true',
                     help='visualize image')
 parser.add_argument('--showbox', default=False, action='store_true',
